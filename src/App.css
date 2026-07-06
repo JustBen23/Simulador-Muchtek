@@ -1,0 +1,59 @@
+/* Estilos de la aplicación */
+
+html, body {
+  /* Evita el zoom de doble toque, pero permite hacer scroll normalmente */
+  touch-action: manipulation; 
+  overflow-x: hidden;
+}
+
+.onTop{
+  z-index: 9999;
+}
+
+.app-shell {
+  min-height: 100vh;
+}
+
+/* Marca de agua sutil para el wordmark del header */
+.brand-logo {
+  height: 2rem;
+  flex: none;
+}
+
+.brand-logo:nth-child(1) {
+  margin-left: 1.5rem;
+}
+
+.preview_image-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  & > img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 1024px) {
+  .brand-logo {
+    height: 2rem;
+    flex: none;
+  }
+
+  .brand-logo:nth-child(1) {
+    margin-left: -0.5rem;
+  }
+
+  .preview_image-container {
+    height: 100%;
+    width: 100%;
+
+    & > img {
+      aspect-ratio: auto;
+    }
+  }
+}

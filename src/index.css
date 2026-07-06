@@ -1,0 +1,76 @@
+html { scroll-behavior: smooth; }
+
+/* ==========================================
+   SCROLLBAR (Diseño original + Auto-hide)
+   ========================================== */
+
+/* 1. Estándar para Firefox (Oculto por defecto) */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+  transition: scrollbar-color 0.3s ease;
+}
+
+.round {
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+}
+
+/* Firefox: Al hacer hover en el contenedor, mostramos tus colores originales */
+.custom-scrollbar:hover {
+  scrollbar-color: #cbd5e1 #f8fafc;
+}
+
+/* ==========================================
+   2. Chrome, Edge, Safari (-webkit)
+   ========================================== */
+
+/* Ancho de la barra */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Hacer las flechas completamente invisibles y quitarles el espacio */
+.custom-scrollbar::-webkit-scrollbar-button,
+.custom-scrollbar::-webkit-scrollbar-button:single-button,
+.custom-scrollbar::-webkit-scrollbar-button:start:decrement,
+.custom-scrollbar::-webkit-scrollbar-button:end:increment {
+  background-color: transparent !important;
+  background: transparent !important;
+  border: none !important;
+  height: 0px !important;
+  width: 0px !important;
+  display: none !important;
+}
+
+/* TRACK: Transparente por defecto */
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 8px;
+}
+
+/* THUMB (La barra): Transparente por defecto, con border transparente para mantener el grosor */
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 8px;
+  border: 2px solid transparent; 
+}
+
+/* ==========================================
+   INTERACCIONES (HOVER) -webkit
+   ========================================== */
+
+/* Cuando pasas el mouse por el CONTENEDOR: aparecen tu track y tu thumb originales */
+.custom-scrollbar:hover::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+
+.custom-scrollbar:hover::-webkit-scrollbar-thumb {
+  background-color: #cbd5e1;
+  border: 2px solid #f8fafc;
+}
+
+/* Cuando pasas el mouse directamente SOBRE LA BARRA: se oscurece al color original que tenías */
+.custom-scrollbar:hover::-webkit-scrollbar-thumb:hover {
+  background-color: #94a3b8;
+}
