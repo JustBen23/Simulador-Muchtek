@@ -8,7 +8,7 @@ Simulador interactivo de aberturas y recubrimientos de PVC Mûchtek[cite: 18]. P
 
 ## 1. Arquitectura General y Configuración del Proyecto
 
-- **Repositorio Principal:** La base de código centralizada del proyecto se encuentra alojada de forma pública en GitHub bajo la dirección: [https://github.com/JustBen23/Simulador-Muchtek](https://github.com/JustBen23/Simulador-Muchtek).
+- **Repositorio Principal:** La base de código centralizada del proyecto se encuentra alojada de forma pública en GitHub bajo la dirección: [https://github.com/[User]/Simulador-Muchtek](https://github.com/[User]/Simulador-Muchtek).
 - **Entorno y Control de Versiones:** La aplicación se encuentra completamente desplegada en el entorno de producción operando de forma exclusiva sobre la rama estable `main`.
 - **Gestor de Paquetes y Setup:** El ecosistema de desarrollo utiliza **pnpm** como manejador de dependencias. La inicialización local del servidor se efectúa mediante el comando `pnpm install` seguido de `pnpm dev`.
 
@@ -88,9 +88,8 @@ La lógica de negocio y la sincronización de la interfaz se gobiernan centraliz
 ## 6. Despliegue y Mantenimiento de Producción
 
 - **Generación de Artefactos de Distribución:** El despliegue de la aplicación se ejecuta compilando el código mediante el comando `pnpm build`, el cual genera los elementos optimizados listos para producción dentro del directorio local `/dist`.
-- **Protocolo de Transferencia:** Los archivos resultantes de la compilación son cargados e inyectados en el servidor web remoto a través del protocolo **FTPS**, autenticándose mediante las credenciales asignadas al usuario institucional `ale-jlo`.
+- **Protocolo de Transferencia:** Los archivos resultantes de la compilación son cargados e inyectados en el servidor web remoto a través del protocolo **FTPS**.
 - **Variables y Entorno:** La aplicación en producción opera consumiendo endpoints relativos a su dominio, descartando el uso e implementación de configuraciones basadas en archivos externos `.env.example`.
-- **Estado de Mantenimiento:** Actualmente el sistema no registra tareas pendientes, problemas técnicos ni bugs conocidos dentro de su entorno de producción, reportando una operatividad del 100% y total estabilidad funcional.
 
 ## Stack Principal
 
